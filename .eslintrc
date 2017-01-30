@@ -23,5 +23,9 @@
     "plugins": [
         "react"
     ],
+    "globals": {
+        "describe": true,
+        "it": true
+    },
     "extends": ["eslint:recommended", "plugin:react/recommended"]
 }
