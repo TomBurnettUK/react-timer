@@ -2,17 +2,24 @@ import React from 'react';
 
 import Nav from 'Nav';
 
-const Main = () => {
-    return (
-        <div>
-            <Nav />
-            <div className="row">
-                <div>
-                    <p>Main.jsx</p>
+class Main extends React.Component {
+    render () {
+        return (
+            <div>
+                <Nav />
+                <div className="row">
+                    <div>
+                        <p>Main.jsx</p>
+                        {this.props.children}
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
+}
+
+Main.propTypes = {
+    children: React.PropTypes.node
 };
 
-module.exports = Main;
+export default Main;
